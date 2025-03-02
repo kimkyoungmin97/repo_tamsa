@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "
+
+http://mybatis.org/dtd/mybatis-3-mapper.dtd
+
+">
+
+<mapper namespace="com.a4a4lab.fapp.grouptype.GrouptypeDao">
+
+	<resultMap id="resultMapObj" type="com.a4a4lab.fapp.grouptype.GrouptypeDto"></resultMap>
+	<select id="selectList" resultMap="resultMapObj">
+		SELECT
+			seq,
+			directInput
+		From
+			grouptype
+		WHERE 1=1
+		ORDER BY seq DESC
+	</select>
+
+</mapper>
