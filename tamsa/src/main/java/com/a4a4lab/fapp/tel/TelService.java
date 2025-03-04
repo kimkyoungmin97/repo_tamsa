@@ -27,6 +27,10 @@ public class TelService {
 		
 		return  telDao.selectList();
 	}
+	public TelDto selectOne(TelDto telDto){
+		
+		return  telDao.selectOne(telDto);
+	}
 	
 	
 

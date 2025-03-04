@@ -13,7 +13,7 @@
 		</tr>
 		<tr th:each="list : ${list}"> 
 			<td th:text="${list.seq}"></td>
-			<td th:text="${list.homepage}"></td>
+			<td><a th:href="@{/homepage/homepageXdmView(seq=${list.seq})}" th:text="${list.homepage}"></a></td>
 			<td th:text="${list.addContact_seq}"></td>
 			<td th:text="${list.representativeHomepage}"></td>
 		</tr>

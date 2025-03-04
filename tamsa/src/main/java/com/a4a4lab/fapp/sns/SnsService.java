@@ -15,5 +15,9 @@ public class SnsService {
 		
 		return snsDao.selectList();
 	}
+	
+	public SnsDto selectOne(SnsDto snsDto) {
+		return snsDao.selectOne(snsDto);
+	}
 
 }

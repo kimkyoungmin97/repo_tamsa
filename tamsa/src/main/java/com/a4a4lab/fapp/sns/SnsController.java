@@ -13,11 +13,18 @@ public class SnsController {
 	SnsService snsService;
 	
 	@RequestMapping(value ="/sns/snsXdmList")
-	public String codeGroupXdmList(Model model) {
+	public String snsXdmList(Model model) {
 		
 		model.addAttribute("list", snsService.selectList());
 		
 		return "sns/snsXdmList";
+	}
+	
+	@RequestMapping(value ="/sns/snsXdmView")
+	public String snsXdmView(Model model, SnsDto snsDto) {
+		
+		model.addAttribute("item", snsService.selectOne(snsDto));
+		return "sns/snsXdmView";
 	}
 
 }

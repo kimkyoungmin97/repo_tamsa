@@ -17,5 +17,15 @@ http://mybatis.org/dtd/mybatis-3-mapper.dtd
 		WHERE 1=1
 		ORDER BY seq DESC
 	</select>
+	<select id="selectOne" resultMap="resultMapObj">
+		SELECT
+			seq,
+			directInput
+		From
+			grouptype
+		WHERE 1=1
+			AND seq=#{seq}
+		ORDER BY seq DESC
+	</select>
 
 </mapper>

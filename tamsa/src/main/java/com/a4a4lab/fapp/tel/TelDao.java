@@ -12,6 +12,7 @@ public interface TelDao {
 	// 쿼리 결과를 가져옴
 	
 	public List<TelDto> selectList();
+	public TelDto selectOne(TelDto telDto);
 	
 
 }

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+	<table>
+		<tr>
+			<td>seq</td>
+			<td>representativeAddress</td>
+			<td>addressType</td>
+			<td>address</td>
+			<td>zipCode</td>
+			<td>addContact_seq</td>
+		</tr>
+		<tr th:each="list : ${list}"> 
+			<td th:text="${list.seq}"></td>
+			<td th:text="${list.representativeAddress}"></td>
+			<td th:text="${list.addressType}"></td>
+			<td><a th:href="@{/address/addressXdmView(seq=${list.seq})}" th:text="${list.address}"></a></td>
+			<td th:text="${list.zipCode}"></td>
+			<td th:text="${list.addContact_seq}"></td>
+		</tr>
+
+	</table>
+</body>
+</html>

@@ -12,11 +12,19 @@ public class HomepageController {
 	HomepageService homepageService;
 	
 	@RequestMapping(value ="/homepage/homepageXdmList")
-	public String codeGroupXdmList(Model model) {
+	public String homepageXdmList(Model model) {
 		
 		model.addAttribute("list", homepageService.selectList());
 		
 		return "homepage/homepageXdmList";
+	}
+	
+	@RequestMapping(value="/homepage/homepageXdmView")
+	public String homepageXdmView(Model model, HomepageDto homepageDto) {
+		
+		model.addAttribute("item", homepageService.selectOne(homepageDto));
+		
+		return "homepage/homepageXdmView";
 	}
 
 }

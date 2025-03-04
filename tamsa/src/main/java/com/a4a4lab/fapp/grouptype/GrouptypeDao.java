@@ -8,5 +8,6 @@ import org.springframework.stereotype.Repository;
 public interface GrouptypeDao {
 	
 	public List<GrouptypeDto> selectList();
+	public GrouptypeDto selectOne(GrouptypeDto grouptypeDto);
 
 }

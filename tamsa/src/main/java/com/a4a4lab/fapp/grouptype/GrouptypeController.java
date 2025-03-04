@@ -11,11 +11,17 @@ public class GrouptypeController {
 	@Autowired
 	GrouptypeService grouptypeService;
 	@RequestMapping(value ="/grouptype/grouptypeXdmList")
-	public String codeGroupXdmList(Model model) {
+	public String grouptypeXdmList(Model model) {
 		
 		model.addAttribute("list", grouptypeService.selectList());
 		
 		return "grouptype/grouptypeXdmList";
+	}
+	
+	@RequestMapping(value="/grouptype/grouptypeXdmView")
+	public String grouptypeXdmView(Model model, GrouptypeDto grouptypeDto) {
+		model.addAttribute("item", grouptypeService.selectOne(grouptypeDto));
+		return "grouptype/grouptypeXdmView";
 	}
 	
 

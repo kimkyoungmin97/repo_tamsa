@@ -11,7 +11,7 @@
 		</tr>
 		<tr th:each="list : ${list}"> 
 			<td th:text="${list.seq}"></td>
-			<td th:text="${list.directInput}"></td>
+			<td><a th:href="@{/grouptype/grouptypeXdmView(seq=${list.seq})}" th:text="${list.directInput}"></a></td>
 		</tr>
 
 	</table>

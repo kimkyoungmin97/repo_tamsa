@@ -16,7 +16,7 @@
 			<td th:text="${list.seq}"></td>
 			<td th:text="${list.representativeTel}"></td>
 			<td th:text="${list.telType}"></td>
-			<td th:text="${list.tel}"></td>
+			<td><a th:href="@{/tel/telXdmView(seq=${list.seq})}" th:text="${list.tel}"></a></td>
 			<td th:text="${list.addContact_seq}"></td>
 		</tr>
 

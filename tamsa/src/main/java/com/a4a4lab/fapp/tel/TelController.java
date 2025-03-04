@@ -29,11 +29,19 @@ public class TelController {
 //		return "tel/telXdmList";
 //	}
 	@RequestMapping(value ="/tel/telXdmList")
-	public String codeGroupXdmList(Model model) {
+	public String telXdmList(Model model) {
 		
 		model.addAttribute("list", telService.selectList());
 		
 		return "tel/telXdmList";
+	}
+	@RequestMapping(value ="/tel/telXdmView")
+	public String telXdmView(Model model, TelDto telDto ) {
+		
+		
+		model.addAttribute("item", telService.selectOne(telDto));
+		
+		return "tel/telXdmView";
 	}
 	
 

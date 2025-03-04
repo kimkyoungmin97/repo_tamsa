@@ -16,7 +16,7 @@
 			<td th:text="${list.seq}"></td>
 			<td th:text="${list.representativeSns}"></td>
 			<td th:text="${list.snsType}"></td>
-			<td th:text="${list.sns}"></td>
+			<td><a th:href="@{/sns/snsXdmView(seq=${list.seq})}" th:text="${list.sns}"></a></td>
 			<td th:text="${list.addContact_seq}"></td>
 		</tr>
 

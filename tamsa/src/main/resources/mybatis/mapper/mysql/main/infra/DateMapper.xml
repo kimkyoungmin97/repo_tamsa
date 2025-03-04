@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "
+
+http://mybatis.org/dtd/mybatis-3-mapper.dtd
+
+">
+
+<mapper namespace="com.a4a4lab.fapp.date.DateDao">
+
+	<resultMap id="resultMapObj" type="com.a4a4lab.fapp.date.DateDto"></resultMap>
+	<select id="selectList" resultMap="resultMapObj">
+		SELECT
+			seq,
+		    representativeDate,
+		    dateType,
+		    date,
+		    solarCalendarNy,
+		    addContact_seq
+		From
+			date
+		WHERE 1=1
+		ORDER BY seq DESC
+	</select>
+	<select id="selectOne" resultMap="resultMapObj">
+		SELECT
+			seq,
+		    representativeDate,
+		    dateType,
+		    date,
+		    solarCalendarNy,
+		    addContact_seq
+		From
+			date
+		WHERE 1=1
+			AND seq=#{seq}
+		ORDER BY seq DESC
+	</select>
+
+</mapper>

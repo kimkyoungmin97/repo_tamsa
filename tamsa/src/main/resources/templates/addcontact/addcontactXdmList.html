@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+	<table>
+		<tr>
+			<td>seq</td>
+			<td>favoritesContact</td>
+			<td>firstName</td>
+			<td>lastName</td>
+			<td>naverId</td>
+			<td>nickName</td>
+			<td>honorificTitle</td>
+			<td>middleName</td>
+			<td>title</td>
+			<td>memo</td>
+		</tr>
+		<tr th:each="list : ${list}"> 
+			<td th:text="${list.seq}"></td>
+			<td th:text="${list.favoritesContact}"></td>
+			<td th:text="${list.firstName}"></td>
+			<td th:text="${list.lastName}"></td>
+			<td th:text="${list.naverId}"></td>
+			<td><a th:href="@{/addcontact/addcontactXdmView(seq=${list.seq})}" th:text="${list.nickName}"></a></td>
+			<td th:text="${list.honorificTitle}"></td>
+			<td th:text="${list.middleName}"></td>
+			<td th:text="${list.title}"></td>
+			<td th:text="${list.memo}"></td>
+		</tr>
+
+	</table>
+</body>
+</html>
