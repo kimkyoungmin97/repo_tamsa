@@ -18,6 +18,9 @@ public class HomepageService {
 	public HomepageDto selectOne(HomepageDto homepageDto) {
 		return homepageDao.selectOne(homepageDto);
 	}
+	public int insert(HomepageDto homepageDto) {
+		return homepageDao.insert(homepageDto);
+	}
 	
 
 }

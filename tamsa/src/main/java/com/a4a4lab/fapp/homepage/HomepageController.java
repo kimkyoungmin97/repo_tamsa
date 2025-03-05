@@ -26,5 +26,15 @@ public class HomepageController {
 		
 		return "homepage/homepageXdmView";
 	}
+	
+	@RequestMapping(value="homepage/homepageXdmForm")
+	public String homepageXdmForm() {
+		return "homepage/homepageXdmForm";
+	}
+	@RequestMapping(value="homepage/homepageXdmInst")
+	public String homepageXdmInst(HomepageDto homepageDto) {
+		homepageService.insert(homepageDto);
+		return "redirect:/homepage/homepageXdmList";
+	}
 
 }

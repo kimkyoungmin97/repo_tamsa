@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+
+	<form action="/group/groupXdmInst" method="post" id="form">
+		seq:<input type="text" name="seq" disabled>
+		groupType_seq:<input type="text" name="groupType_seq">
+		addContact_seq:<input type="text" name="addContact_seq">
+		<button type=button id="btnSave">저장</button>
+	</form>
+	<script type="text/javascript">
+		document.getElementById("btnSave").onclick = function(){
+			document.getElementById("form").submit();
+		}
+	</script>
+</body>
+</html>

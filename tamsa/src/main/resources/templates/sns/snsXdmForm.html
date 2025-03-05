@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+
+	<form action="/sns/snsXdmInst" method="post" id="form">
+		seq: <input type="text" name="seq" maxlength="10" disabled>
+		representativeSns: <input type="text" name="representativeSns" maxlength="10">
+		snsType: <input type="text" name="snsType" maxlength="10">
+		sns: <input type="text" name="sns"   maxlength="10">
+		addContact_seq: <input type="text" name="addContact_seq" maxlength="10">
+		<button type="button" id="btnSave">저장</button>
+	</form>
+	<script type ="text/javascript">
+		document.getElementById("btnSave").onclick = function() {
+			document.getElementById("form").submit();
+		}
+		
+	
+	</script>
+	
+	
+</body>
+</html>

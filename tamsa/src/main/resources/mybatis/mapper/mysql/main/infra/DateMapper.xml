@@ -35,5 +35,26 @@ http://mybatis.org/dtd/mybatis-3-mapper.dtd
 			AND seq=#{seq}
 		ORDER BY seq DESC
 	</select>
+	<insert id="insert">
+		INSERT INTO date(
+		representativeDate,
+		dateType,
+		date,
+		solarCalendarNy,
+		addContact_seq
+		) VALUES(
+		#{representativeDate},
+		#{dateType},
+		#{date},
+		#{solarCalendarNy},
+		#{addContact_seq}
+		)
+		
+	<selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+	</selectKey>
+		
+		
+	</insert>
 
 </mapper>

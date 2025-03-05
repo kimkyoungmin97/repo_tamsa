@@ -19,5 +19,8 @@ public class SnsService {
 	public SnsDto selectOne(SnsDto snsDto) {
 		return snsDao.selectOne(snsDto);
 	}
+	public int insert(SnsDto snsDto) {
+		return snsDao.insert(snsDto);
+	}
 
 }

@@ -13,6 +13,7 @@ public interface TelDao {
 	
 	public List<TelDto> selectList();
 	public TelDto selectOne(TelDto telDto);
+	public int insert(TelDto telDto);
 	
 
 }

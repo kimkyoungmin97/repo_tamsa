@@ -16,5 +16,8 @@ public class DateService {
 	public DateDto selectOne(DateDto dateDto) {
 		return dateDao.selectOne(dateDto);
 	}
+	public int insert(DateDto dateDto) {
+		return dateDao.insert(dateDto);
+	}
 
 }

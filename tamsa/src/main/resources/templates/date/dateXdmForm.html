@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+
+	<form action="/date/dateXdmInst" method="post" id="form">
+		seq:<input type="text" name="seq" disabled>
+		representativeDate:<input type="text" name="representativeDate">
+		dateType:<input type="text" name="dateType">
+		date:<input type="text" name="date">
+		solarCalendarNy:<input type="text" name="solarCalendarNy">
+		addContact_seq: <input type="text" name="addContact_seq">
+		<button type="button" id="btnSave">저장</button>
+	</form>
+	<script type="text/javascript">
+		document.getElementById("btnSave").onclick = function(){
+			document.getElementById("form").submit();
+		}
+	</script>
+</body>
+</html>

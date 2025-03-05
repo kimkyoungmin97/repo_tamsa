@@ -19,6 +19,9 @@ public class GroupService {
 		return groupDao.selectOne(groupDto);
 		
 	}
+	public int insert(GroupDto groupDto) {
+		return groupDao.insert(groupDto);
+	}
 	
 	
 

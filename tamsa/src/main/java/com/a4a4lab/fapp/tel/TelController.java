@@ -43,6 +43,20 @@ public class TelController {
 		
 		return "tel/telXdmView";
 	}
+	@RequestMapping(value ="/tel/telXdmForm")
+	public String telXdmForm() {
+				
+		return "tel/telXdmForm";
+	}
+	@RequestMapping(value ="/tel/telXdmInst")
+	public String telXdmInst(TelDto telDto) {
+	
+		
+		telService.insert(telDto);
+	
+		
+		return "redirect:/tel/telXdmList";
+	}
 	
 
 	

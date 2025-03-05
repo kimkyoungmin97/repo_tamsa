@@ -23,6 +23,15 @@ public class GrouptypeController {
 		model.addAttribute("item", grouptypeService.selectOne(grouptypeDto));
 		return "grouptype/grouptypeXdmView";
 	}
+	@RequestMapping(value="/grouptype/grouptypeXdmForm")
+	public String grouptypeXdmForm() {
+		return "grouptype/grouptypeXdmForm";
+	}
+	@RequestMapping(value="grouptype/grouptypeXdmInst")
+	public String grouptypeXdmInst(GrouptypeDto grouptypeDto) {
+		grouptypeService.insert(grouptypeDto);
+		return "redirect:/grouptype/grouptypeXdmList";
+	}
 	
 
 }

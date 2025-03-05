@@ -32,6 +32,11 @@ public class TelService {
 		return  telDao.selectOne(telDto);
 	}
 	
+	public int insert(TelDto telDto) {
+		
+		return telDao.insert(telDto);
+	}
+	
 	
 
 }

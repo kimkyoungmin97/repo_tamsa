@@ -31,5 +31,19 @@ http://mybatis.org/dtd/mybatis-3-mapper.dtd
 			AND seq=#{seq}
 		ORDER BY seq DESC
 	</select>
+	<insert id="insert">
+		INSERT INTO homepage(
+		homepage,
+		addContact_seq,
+		representativeHomepage
+		) VALUES(
+		#{homepage},
+		#{addContact_seq},
+		#{representativeHomepage}
+		)
+		<selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
 
 </mapper>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+	<table>
+		<tr>
+			<td>seq</td>
+			<td>directInput</td>
+		</tr>
+	</table>
+	<form action="/grouptype/grouptypeXdmInst" method="post" id="form">
+	seq: <input type="text" name="seq" disabled>
+	directInput: <input type="text" name="directInput">
+	<button type="button" id="btnSave">저장</button>
+	</form>
+	<script type="text/javascript">
+		document.getElementById("btnSave").onclick = function() {
+			document.getElementById("form").submit();
+			
+		}
+	</script>
+</body>
+</html>

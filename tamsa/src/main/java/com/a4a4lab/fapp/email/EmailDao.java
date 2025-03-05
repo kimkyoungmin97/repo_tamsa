@@ -9,5 +9,6 @@ public interface EmailDao {
 	
 	public List<EmailDto> selectList();
 	public EmailDto selectOne(EmailDto emailDto);
+	public int insert(EmailDto emailDto);
 
 }

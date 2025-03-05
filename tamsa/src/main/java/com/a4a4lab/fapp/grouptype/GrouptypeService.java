@@ -20,5 +20,8 @@ public class GrouptypeService {
 	
 		return grouptypeDao.selectOne(grouptypeDto);
 	}
+	public int insert(GrouptypeDto grouptypeDto) {
+		return grouptypeDao.insert(grouptypeDto);
+	}
 
 }
