@@ -22,6 +22,9 @@ public class GroupService {
 	public int insert(GroupDto groupDto) {
 		return groupDao.insert(groupDto);
 	}
+	public int update(GroupDto groupDto) {
+		return groupDao.update(groupDto);
+	}
 	
 	
 

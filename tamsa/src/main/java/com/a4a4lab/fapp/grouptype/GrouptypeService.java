@@ -23,5 +23,8 @@ public class GrouptypeService {
 	public int insert(GrouptypeDto grouptypeDto) {
 		return grouptypeDao.insert(grouptypeDto);
 	}
+	public int update(GrouptypeDto grouptypeDto) {
+		return grouptypeDao.update(grouptypeDto);
+	}
 
 }

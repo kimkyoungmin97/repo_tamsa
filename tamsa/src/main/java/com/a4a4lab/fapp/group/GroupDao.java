@@ -10,6 +10,7 @@ public interface GroupDao {
 	public List<GroupDto> selectList();
 	public GroupDto selectOne(GroupDto groupDto);
 	public int insert(GroupDto groupDto);
+	public int update(GroupDto groupDto);
 	
 	
 

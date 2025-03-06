@@ -58,6 +58,18 @@ public class TelController {
 		return "redirect:/tel/telXdmList";
 	}
 	
+	@RequestMapping(value="/tel/telXdmMform")
+	public String telXdmMform(Model model, TelDto telDto) {
+		model.addAttribute("item", telService.selectOne(telDto));
+		return "tel/telXdmMform";
+	}
+	@RequestMapping(value="/tel/telXdmUpdt")
+	public String telXdmUpdt(TelDto telDto) {
+		telService.update(telDto);
+		return "redirect:/tel/telXdmList";
+	}
+	
+	
 
 	
 

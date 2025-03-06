@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+	<table>
+		<tr>
+			<td>seq</td>
+			<td>homepage</td>
+			<td>addContact_seq</td>
+			<td>representativeHomepage</td>
+		</tr>
+	</table>
+	<form action="/homepage/homepageXdmUpdt" type="post" id="form">
+		<input type="hidden" name="seq" th:value="${item?.seq}">
+		seq:<input type="text" name="seq" disabled th:value="${item?.seq}">
+		homepage:<input type="text" name="homepage" th:value="${item?.homepage}">
+		addContact_seq:<input type="text" name="addContact_seq" th:value="${item?.addContact_seq}">
+		representativeHomepage:<input type="text" name="representativeHomepage" th:value="${item?.representativeHomepage}">
+		<button type="button" id="btnSave" >저장</button>
+	</form>
+		<script type ="text/javascript">
+		document.getElementById("btnSave").onclick = function() {
+			document.getElementById("form").submit();
+		}
+		
+	
+	</script>
+</body>
+</html>

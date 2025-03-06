@@ -19,5 +19,8 @@ public class DateService {
 	public int insert(DateDto dateDto) {
 		return dateDao.insert(dateDto);
 	}
+	public int update(DateDto dateDto) {
+		return dateDao.update(dateDto);
+	}
 
 }

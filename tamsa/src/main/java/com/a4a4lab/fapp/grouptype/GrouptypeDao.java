@@ -10,5 +10,6 @@ public interface GrouptypeDao {
 	public List<GrouptypeDto> selectList();
 	public GrouptypeDto selectOne(GrouptypeDto grouptypeDto);
 	public int insert(GrouptypeDto grouptypeDto);
+	public int update(GrouptypeDto grouptypeDto);
 
 }

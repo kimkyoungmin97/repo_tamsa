@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+
+	<form action="/sns/snsXdmUpdt" method="post" id="form">
+		<input type="hidden" name="seq" th:value="${item?.seq}">
+		seq: <input type="text" name="seq" maxlength="10" disabled th:value="${item?.seq}">
+		representativeSns: <input type="text" name="representativeSns" th:value="${item?.representativeSns}">
+		snsType: <input type="text" name="snsType" maxlength="10" th:value="${item?.snsType}">
+		sns: <input type="text" name="sns"  th:value="${item?.sns}">
+		addContact_seq: <input type="text" name="addContact_seq" th:value="${item?.addContact_seq}">
+		<button type="button" id="btnSave">저장</button>
+	</form>
+	<script type ="text/javascript">
+		document.getElementById("btnSave").onclick = function() {
+			document.getElementById("form").submit();
+		}
+		
+	
+	</script>
+	
+	
+</body>
+</html>

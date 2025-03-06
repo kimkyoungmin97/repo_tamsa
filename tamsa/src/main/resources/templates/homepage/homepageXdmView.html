@@ -17,7 +17,9 @@
 			<td th:text="${item.addContact_seq}"></td>
 			<td th:text="${item.representativeHomepage}"></td>
 		</tr>
-
 	</table>
+	<a href="/homepage/homepageXdmList">목록</a>
+	<a href="">삭제</a>
+	<a th:href="@{/homepage/homepageXdmMform(seq=${item.seq})}">수정</a>
 </body>
 </html>

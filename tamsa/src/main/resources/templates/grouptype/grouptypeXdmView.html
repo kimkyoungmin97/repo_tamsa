@@ -12,8 +12,11 @@
 				<td th:text="${item.seq}"></td>
 				<td th:text="${item.directInput}"></td>
 			</tr>
-	
 		</table>
+		
+		<a href="/grouptype/grouptypeXdmList">목록</a>
+		<a href="">삭제</a>
+		<a th:href="@{/grouptype/grouptypeXdmMform(seq=${item.seq})}">수정</a>
 
 </body>
 </html>

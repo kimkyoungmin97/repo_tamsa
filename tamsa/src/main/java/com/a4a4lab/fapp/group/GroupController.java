@@ -32,5 +32,15 @@ public class GroupController {
 		groupService.insert(groupDto);
 		return "redirect:/group/groupXdmList";
 	}
+	@RequestMapping(value="/group/groupXdmMform")
+	public String groupXdmMform(Model model, GroupDto groupDto) {
+		model.addAttribute("item", groupService.selectOne(groupDto));
+		return "group/groupXdmMform";
+	}
+	@RequestMapping(value="/group/groupXdmUpdt")
+	public String groupXdmUpdt(GroupDto groupDto) {
+		groupService.update(groupDto);
+		return "redirect:/group/groupXdmList";
+	}
 
 }

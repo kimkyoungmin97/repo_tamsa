@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+
+	<form action="/email/emailXdmUpdt" method="post" id="form">
+		<input type="hidden" name="seq" th:value="${item.seq}">
+		seq:<input type="text" name="seq" disabled th:value="${item.seq}">
+		representativeEmail:<input type="text" name="representativeEmail" th:value="${item?.representativeEmail}">
+		email:<input type="text" name="email" th:value="${item?.email}">
+		addContact_seq:<input type="text" name="addContact_seq" th:value="${item?.addContact_seq}">
+		<button type="button" id="btnSave">저장</button>
+	</form>
+	<script type="text/javascript">
+		document.getElementById("btnSave").onclick = function() {
+			document.getElementById("form").submit();
+		}
+	</script>
+</body>
+</html>

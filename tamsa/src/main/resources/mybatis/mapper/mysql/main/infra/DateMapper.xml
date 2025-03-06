@@ -56,5 +56,17 @@ http://mybatis.org/dtd/mybatis-3-mapper.dtd
 		
 		
 	</insert>
+	
+	<update id="update">
+		UPDATE date SET
+		representativeDate=#{representativeDate},
+		dateType=#{dateType},
+		date=#{date},
+		solarCalendarNy=#{solarCalendarNy},
+		addContact_seq=#{addContact_seq}
+		WHERE
+			seq=#{seq}
+		
+	</update>
 
 </mapper>

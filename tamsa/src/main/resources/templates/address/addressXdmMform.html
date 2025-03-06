@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+
+	<form action="/address/addressXdmUpdt" id=form>
+		<input type="hidden" name="seq" th:value="${item.seq}">
+		seq:<input type=text disabled th:value="${item.seq}">
+		representativeAddress:<input type=text name="representativeAddress" th:value="${item?.representativeAddress}">
+		addressType:<input type=text name="addressType" th:value="${item.addressType}">
+		address:<input type=text name="address" th:value="${item.address}">
+		zipCode:<input type=text name="zipCode" th:value="${item.zipCode}">		
+		addContact_seq:<input type=text name="addContact_seq" th:value="${item.addContact_seq}">
+		<button type="button" id=btnSave>저장</button>
+	</form>
+	
+	<script type="text/javascript">
+		document.getElementById("btnSave").onclick = function() {
+			document.getElementById("form").submit();
+		}
+	</script>
+</body>
+</html>

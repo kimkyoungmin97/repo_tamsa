@@ -30,5 +30,15 @@ public class DateController {
 		dateService.insert(dateDto);
 		return "redirect:/date/dateXdmList";
 	}
+	@RequestMapping(value="/date/dateXdmMform")
+	public String dateXdmMform(Model model, DateDto dateDto) {
+		model.addAttribute("item", dateService.selectOne(dateDto));
+		return "date/dateXdmMform";
+	}
+	@RequestMapping(value="/date/dateXdmUpdt")
+	public String dateXdmUpdt(DateDto dateDto) {
+		dateService.update(dateDto);
+		return "redirect:/date/dateXdmList";
+	}
 
 }

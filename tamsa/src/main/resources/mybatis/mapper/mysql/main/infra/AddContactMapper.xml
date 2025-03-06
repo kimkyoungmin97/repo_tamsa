@@ -43,5 +43,46 @@ http://mybatis.org/dtd/mybatis-3-mapper.dtd
 			AND seq=#{seq}
 		ORDER BY seq DESC
 	</select>
+	<insert id="insert">
+		INSERT INTO addcontact(
+		favoritesContact,
+		firstName,
+		lastName,
+		naverId,
+		nickName,
+		honorificTitle,
+		middleName,
+		title,
+		memo
+		)VALUES(
+		#{favoritesContact},
+		#{firstName},
+		#{lastName},
+		#{naverId},
+		#{nickName},
+		#{honorificTitle},
+		#{middleName},
+		#{title},
+		#{memo}
+		)
+		<selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
+	<update id="update">
+		UPDATE addcontact SET
+			favoritesContact=#{favoritesContact},
+			firstName=#{firstName},
+			lastName=#{lastName},
+			naverId=#{naverId},
+			nickName=#{nickName},
+			honorificTitle=#{honorificTitle},
+			middleName=#{middleName},
+			title=#{title},
+			memo=#{memo}
+		WHERE
+			seq=#{seq}
+		
+	</update>
 
 </mapper>

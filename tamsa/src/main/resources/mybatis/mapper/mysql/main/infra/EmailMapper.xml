@@ -47,5 +47,13 @@ http://mybatis.org/dtd/mybatis-3-mapper.dtd
 	
 	
 	</insert>
+	<update id="update">
+		UPDATE email SET
+			representativeEmail=#{representativeEmail},
+			email=#{email},
+			addContact_seq=#{addContact_seq}
+		WHERE
+			seq=#{seq}
+	</update>
 
 </mapper>

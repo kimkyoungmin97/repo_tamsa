@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+	<form action="/tel/telXdmUpdt" method="post" id="form">
+		<input type="hidden" name="seq" th:value="${item?.seq}">
+		seq: <input type="text" name="seq" maxlength="10" disabled th:value="${item?.seq}">
+		representativeTel: <input type="text" name="representativeTel" th:value="${item?.representativeTel}">
+		telType: <input type="text" name="telType" th:value="${item?.telType}">
+		tel: <input type="text" name="tel" id="tel" th:value="${item?.tel}">
+		addContact_seq: <input type="text" name="addContact_seq" th:value="${item?.addContact_seq}">
+		<button type="button" id="btnSave">저장</button>
+	</form>
+	
+	
+<script type ="text/javascript">
+	document.getElementById("btnSave").onclick = function() {
+		document.getElementById("form").submit();
+	}
+		
+</script>
+</body>
+</html>

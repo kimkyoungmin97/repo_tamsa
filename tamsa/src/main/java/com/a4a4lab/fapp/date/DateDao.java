@@ -10,5 +10,6 @@ public interface DateDao {
 	public List<DateDto> selectList();
 	public DateDto selectOne(DateDto dateDto);
 	public int insert(DateDto dateDto);
+	public int update(DateDto dateDto);
 
 }

@@ -18,6 +18,12 @@ public class AddContactService {
 	public AddContactDto selectOne(AddContactDto addContactDto) {
 		return addContactDao.selectOne(addContactDto);
 	}
+	public int insert(AddContactDto addContactDto) {
+		return addContactDao.insert(addContactDto);
+	}
+	public int update(AddContactDto addContactDto) {
+		return addContactDao.update(addContactDto);
+	}
 	
 
 }

@@ -36,6 +36,9 @@ public class TelService {
 		
 		return telDao.insert(telDto);
 	}
+	public int update(TelDto telDto) {
+		return telDao.update(telDto);
+	}
 	
 	
 

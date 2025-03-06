@@ -9,5 +9,7 @@ public interface AddContactDao {
 	
 	public List<AddContactDto> selectList();
 	public AddContactDto selectOne(AddContactDto addContactDto);
+	public int insert(AddContactDto addContactDto);
+	public int update(AddContactDto addContactDto);
 
 }

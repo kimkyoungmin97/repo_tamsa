@@ -38,5 +38,16 @@ public class SnsController {
 		return "redirect:/sns/snsXdmList";
 	}
 	
+	@RequestMapping(value="/sns/snsXdmMform")
+	public String snsXdmMform(Model model, SnsDto snsDto) {
+		model.addAttribute("item", snsService.selectOne(snsDto));
+		return "sns/snsXdmMform";
+	}
+	@RequestMapping(value="/sns/snsXdmUpdt")
+	public String snsXdmUpdt(SnsDto snsDto) {
+		snsService.update(snsDto);
+		return "redirect:/sns/snsXdmList";
+	}
+	
 
 }

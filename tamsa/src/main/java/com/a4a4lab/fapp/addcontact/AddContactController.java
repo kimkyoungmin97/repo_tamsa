@@ -25,5 +25,24 @@ public class AddContactController {
 		model.addAttribute("item", addContactService.selectOne(addContactDto));
 		return "addcontact/addcontactXdmView";
 	}
+	@RequestMapping(value="/addcontact/addcontactXdmForm")
+	public String addcontactXdmForm() {
+		return "addcontact/addcontactXdmForm";
+	}
+	@RequestMapping(value="addcontact/addcontactXdmInst")
+	public String addcontactXdmInst(AddContactDto addContactDto) {
+		addContactService.insert(addContactDto);
+		return "redirect:/addcontact/addcontactXdmList";
+	}
+	@RequestMapping(value="addcontact/addcontactXdmMform")
+	public String addcontactXdmMform(Model model, AddContactDto addContactDto) {
+		model.addAttribute("item", addContactService.selectOne(addContactDto));
+		return "addcontact/addcontactXdmMform";
+	}
+	@RequestMapping(value="addcontact/addcontactXdmUpdt")
+	public String addcontactXdmUpdt(AddContactDto addContactDto) {
+		addContactService.update(addContactDto);
+		return "redirect:/addcontact/addcontactXdmList";
+	}
 
 }

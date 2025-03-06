@@ -10,5 +10,6 @@ public interface HomepageDao {
 	public List<HomepageDto> selectList();
 	public HomepageDto selectOne(HomepageDto hompageDto);
 	public int insert(HomepageDto homepageDto);
+	public int update(HomepageDto homepageDto);
 
 }
