@@ -68,6 +68,18 @@ public class TelController {
 		telService.update(telDto);
 		return "redirect:/tel/telXdmList";
 	}
+	@RequestMapping(value="/tel/telXdmDele")
+	public String telXdmDele(TelDto telDto) {
+		telService.delete(telDto);
+		return "redirect:/tel/telXdmList";
+	}
+	@RequestMapping(value="/tel/telXdmUele")
+	public String telXdmUele(TelDto telDto) {
+		telService.uelete(telDto);
+		return "redirect:/tel/telXdmList";
+	}
+	
+	
 	
 	
 

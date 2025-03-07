@@ -15,6 +15,8 @@ public interface TelDao {
 	public TelDto selectOne(TelDto telDto);
 	public int insert(TelDto telDto);
 	public int update(TelDto telDto);
+	public int delete(TelDto telDto);
+	public int uelete(TelDto telDto);
 	
 
 }

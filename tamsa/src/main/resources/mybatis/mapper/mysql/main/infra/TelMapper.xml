@@ -18,6 +18,7 @@ http://mybatis.org/dtd/mybatis-3-mapper.dtd
 		From
 			tel
 		WHERE 1=1
+			AND delNy=0
 		ORDER BY seq DESC
 	</select>
 	
@@ -60,6 +61,19 @@ http://mybatis.org/dtd/mybatis-3-mapper.dtd
 		WHERE
 			seq=#{seq}
 			
+	</update>
+	
+	<delete id="delete">
+		DELETE FROM tel
+		WHERE
+			seq=#{seq}
+	</delete>
+	
+	<update id="uelete">
+		UPDATE tel SET
+			delNy=1
+		WHERE
+			seq=#{seq}
 	</update>
 	
 

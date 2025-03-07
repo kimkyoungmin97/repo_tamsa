@@ -39,6 +39,12 @@ public class TelService {
 	public int update(TelDto telDto) {
 		return telDao.update(telDto);
 	}
+	public int delete(TelDto telDto) {
+		return telDao.delete(telDto);
+	}
+	public int uelete(TelDto telDto) {
+		return telDao.uelete(telDto);
+	}
 	
 	
 
